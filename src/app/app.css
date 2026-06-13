@@ -1,3 +1,53 @@
-h1{
-    color:pink
+
+.btn{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    gap: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn-gray{
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    gap: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn-green{
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    gap: 10px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.count{
+    font-size: 50px;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    border: 2px solid black;
+    
 }

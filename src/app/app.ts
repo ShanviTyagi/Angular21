@@ -15,4 +15,19 @@ export class App {
   getName(){
     return this.name;
   }
+ count:number=0;
+ 
+
+ handlecount(val:string){
+  if(val=='minus'){
+    this.count--;
+  }
+  if(val=='plus'){
+    this.count++;
+  }
+  else if(val=='reset'){
+    this.count=0; 
+ }
+}
+
 }
