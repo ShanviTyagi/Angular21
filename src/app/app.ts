@@ -12,9 +12,9 @@ import { Login} from './login/login';
 export class App {
   protected readonly title = signal('my-app');
   name="angular"
-  getName(){
-    return this.name;
-  }
+  val=" "
+  displayName=""
+ 
  count:number=0;
  
 
@@ -28,6 +28,19 @@ export class App {
   else if(val=='reset'){
     this.count=0; 
  }
+}
+
+getName(event:Event){
+  const val =(event.target as HTMLInputElement).value;
+   this.val=val;
+}
+
+showName(){
+  this.displayName=this.val;
+}
+
+setName(){
+  this.val="shanvi Tyagi"
 }
 
 }
