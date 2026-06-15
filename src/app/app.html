@@ -1,4 +1,4 @@
-<h1>Counter App</h1>
+<!-- <h1>Counter App</h1>
 <div style="text-align: center;">
   <h2 class="count">{{count}}</h2>
   <div class="container">
@@ -12,9 +12,49 @@
 <h1>user name is : {{displayName}}</h1>
 <input type="text" value="{{val}}" (input)="getName($event)"  placeholder="Enter user name">
 <br>
-<br>
-<button (click)="showName()">
+<br> -->
+<!-- <button (click)="showName()">
   Get value
 </button>
 
 <button (click)="setName()">Set Name</button>
+
+
+
+<h1>If-Else condition</h1>
+<button (click)="hide()">Hide div</button>
+<button (click)="show()">Show function</button>
+
+<button (click)="toggle()">
+  Toggle
+</button>
+@if(display){
+   <div style="height: 100px; width: 100px; background-color: green;">
+
+   </div> 
+}-->
+<!--    
+<h1>For Loops in Angular 21</h1>
+
+@for(user of users ; track user){
+  <h2> {{user}} </h2>
+}
+<hr>
+
+@for(student of students;track student.age){
+  <h2>
+    {{student.age}}
+    <span>
+      {{student.city}}
+    </span>
+  </h2> -->
+
+  <h1>Basic of Signal</h1>
+
+  <button (click)="updateValue('dec')" >Decrement</button>
+  <h1>
+    {{count()}}
+  </h1>
+
+  <button (click)="updateValue('inc')" >Increment</button>
+  
