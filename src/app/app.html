@@ -49,7 +49,7 @@
     </span>
   </h2> -->
 
-  <h1>Basic of Signal</h1>
+  <!-- <h1>Basic of Signal</h1>
 
   <button (click)="updateValue('dec')" >Decrement</button>
   <h1>
@@ -58,3 +58,54 @@
 
   <button (click)="updateValue('inc')" >Increment</button>
   
+
+<h1>Computed Signals</h1>  
+
+<button (click)="showValue()" >show Value </button> -->
+<!-- 
+<h1>Effects</h1>
+<h1>
+  {{userName()}}
+</h1>
+
+<button (click)="userName.set('sam')" >updateValue</button>
+ -->
+
+<!-- <h1>for loop contextual variable</h1>
+@for(user of users; track user ; let i =$index){
+  <h3>
+    this is our {{i+1}}
+    {{user}}
+  </h3>
+} -->
+<!-- 
+<h1>Two way binding</h1>
+
+  <input  [(ngModel)]="name" type="text" placeholder="enter the data">
+
+
+<h1>
+  {{name}}
+</h1> -->
+
+
+<h1>
+  To-Do list
+</h1>
+<input  [(ngModel)]="task" type="text" placeholder="enter your task">
+<button (click)="addTask()" >
+     Add Task
+</button>
+@for(task of taskList;track task.id){
+    <ul>
+      <li>
+        {{task.id}}
+      </li>
+      <li>
+        {{task.task}}
+      </li>
+      <li>
+        <button (click)="delete(task.id)" >Delete</button>
+      </li>
+    </ul>
+}
