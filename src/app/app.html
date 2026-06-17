@@ -39,29 +39,26 @@
 @for(user of users ; track user){
   <h2> {{user}} </h2>
 }
-<hr>
-
-@for(student of students;track student.age){
-  <h2>
-    {{student.age}}
-    <span>
-      {{student.city}}
-    </span>
-  </h2> -->
-
-  <!-- <h1>Basic of Signal</h1>
-
-  <button (click)="updateValue('dec')" >Decrement</button>
-  <h1>
-    {{count()}}
-  </h1>
-
-  <button (click)="updateValue('inc')" >Increment</button>
-  
-
-<h1>Computed Signals</h1>  
-
-<button (click)="showValue()" >show Value </button> -->
+<h1>
+  To-Do list
+</h1>
+<input  [(ngModel)]="task" type="text" placeholder="enter your task">
+<button (click)="addTask()" >
+     Add Task
+</button>
+@for(task of taskList;track task.id){
+    <ul>
+      <li>
+        {{task.id}}
+      </li>
+      <li>
+        {{task.task}}
+      </li>
+      <li>
+        <button (click)="delete(task.id)" >Delete</button>
+      </li>
+    </ul>
+}
 <!-- 
 <h1>Effects</h1>
 <h1>
@@ -88,7 +85,7 @@
   {{name}}
 </h1> -->
 
-
+<!-- 
 <h1>
   To-Do list
 </h1>
@@ -109,3 +106,56 @@
       </li>
     </ul>
 }
+
+<h1>Directive</h1>
+<ul>
+  <li *ngFor="let x of students">
+    {{x}}
+
+  </li>
+</ul> -->
+
+<app-header></app-header>
+
+
+<router-outlet>
+
+</router-outlet>
+
+
+<!-- <h1>Basic Of React forms</h1>
+ <form action="" [formGroup]="profileForm" (ngSubmit)="onSubmit()"> 
+        <input type="text" placeholder="enter name" formControlName="name" >
+         <span *ngIf="name?.hasError('required')">Name is Required</span>
+          <span *ngIf="name?.invalid &&(name?.dirty||name?.touched)">provide user name</span>
+        <br>
+        <br>
+        <input type="text" placeholder="enter password" formControlName="password" >
+        <br>
+        <br>
+        <input type="text" placeholder="enter mail" formControlName="email">
+        <button (click)="onSubmit()">Submit</button>
+
+        
+
+        <h3>
+          {{name.value}}
+        </h3>
+        <h3>
+          {{password.value}}
+        </h3> 
+ </form>  -->
+
+ <h1>template form</h1>
+
+ <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)" >
+     <input type="text" required placeholder="enter input field" name="name" ngModel>
+     <span>name is required</span>
+     <br>
+     <br>
+      <input type="text" placeholder="enter password" name="password" ngModel>
+     <br>
+     <br>
+
+      <button>Add User</button>
+ </form>
